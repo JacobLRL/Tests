@@ -18,7 +18,7 @@ namespace SomeTestsForIt
         }
 
         [TestMethod]
-        public void Check_Remove_Middle_Word()
+        public void Check_RemoveMiddleWord()
         {
             var Tests = new SomeTests.SomeTest();
             Assert.AreEqual("sup dude", Tests.RemoveMiddleWord("sup my dude"));
@@ -26,7 +26,7 @@ namespace SomeTestsForIt
         }
 
         [TestMethod]
-        public void Check_Sum_Of_Array()
+        public void Check_SumOfArray()
         {
             var Tests = new SomeTests.SomeTest();
             Assert.AreEqual(9, Tests.SumIgnoringMax(new int []{ 2, 3, 4, 5 }));
@@ -65,19 +65,19 @@ namespace SomeTestsForIt
         }
 
         [TestMethod]
-        public void AddYearToDateTest()
+        public void Check_AddYearToDate()
         {
             // arrange (setup)
             var arrayInstance = new SomeTests.SomeTest();
             var expectedOutput = "01/01/2020 00:00:00";
             // act (run code)
-            var actualOutput = arrayInstance.AddADay(2019, 1, 1);
+            var actualOutput = arrayInstance.AddAYear(2019, 1, 1);
             // assert (see if test pass/fail)
             Assert.AreEqual(expectedOutput, actualOutput);
         }
 
         [TestMethod]
-        public void BuubleSortTest()
+        public void Check_BubbleSort()
         {
             // arrange (setup)
             var Instance = new SomeTests.SomeTest();
@@ -90,7 +90,7 @@ namespace SomeTestsForIt
         }
 
         [TestMethod]
-        public void ReverseStringTest()
+        public void Check_ReverseString()
         {
             // arrange (setup)
             var Instance = new SomeTests.SomeTest();
@@ -102,7 +102,7 @@ namespace SomeTestsForIt
         }
 
         [TestMethod]
-        public void QuadraticTest()
+        public void Check_Quadratic()
         {
             // arrange (setup)
             var Instance = new SomeTests.SomeTest();
@@ -115,64 +115,44 @@ namespace SomeTestsForIt
 
        
         [TestMethod]
-        public void TestMethod()
+        public void Check_Multiplication()
         {
-            //Arrange 
-            int expected = 50;
-            int num1 = 10;
-            int num2 = 5;
             var Instance = new SomeTests.SomeTest();
-            //Act
-            int actual = Instance.Mult(num1, num2);
-
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(50, Instance.Mult(5, 10));
+            Assert.AreEqual(60, Instance.Mult(6, 10));
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void Check_ProductFive()
         {
             // arrange (setup)
             var unit = new SomeTests.SomeTest();
-            var expectedOutput = 145;
-            // act (run code)
-            var actualOutput = unit.Test1(10);
             // assert (see if test pass/fail)
-            Assert.AreEqual(expectedOutput, actualOutput);
+            Assert.AreEqual(145, unit.ProductFive(29));
+            Assert.AreEqual(65, unit.ProductFive(13));
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void Check_FifthLetter()
         {
             // arrange (setup)
             var unit = new SomeTests.SomeTest();
-            var expectedOutput = "25/12/2015";
-            // act (run code)
-            var actualOutput = unit.Test2();
             // assert (see if test pass/fail)
-            Assert.AreEqual(expectedOutput, actualOutput.ToShortDateString());
+            Assert.AreEqual('d', unit.FifthLetter("Named"));
+            Assert.AreEqual('k', unit.FifthLetter("Jdk a k"));
+            Assert.AreEqual('o', unit.FifthLetter("      hello"));
+            Assert.AreEqual(' ', unit.FifthLetter(" "));
         }
         [TestMethod]
-        public void TestMethod3()
+        public void Check_SumOfFours()
         {
             // arrange (setup)
             var unit = new SomeTests.SomeTest();
-            var expectedOutput = 'd';
-            // act (run code)
-            var actualOutput = unit.Test3("Named");
             // assert (see if test pass/fail)
-            Assert.AreEqual(expectedOutput, actualOutput);
-        }
-        [TestMethod]
-        public void TestMethod4()
-        {
-            // arrange (setup)
-            var unit = new SomeTests.SomeTest();
-            var expectedOutput = 5534;
-            // act (run code)
-            var actualOutput = unit.Test4(out int sum) + sum;
-            // assert (see if test pass/fail)
-            Assert.AreEqual(expectedOutput, actualOutput);
+            Assert.AreEqual(8, unit.SumOfFours(10));
+            Assert.AreEqual(8, unit.SumOfFours(12));
+            Assert.AreEqual(148, unit.SumOfFours(42));
         }
     }
 }

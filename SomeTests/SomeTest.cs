@@ -44,7 +44,7 @@ namespace SomeTests
             return pyramid;
         }
 
-        // takes 2 int arrays, returns teh elements from the first array that aren't in the 
+        // takes 2 int arrays, returns the elements from the first array that aren't in the 
         // second array
         public int[] Different(int[] arr1, int[] arr2) {
 
@@ -52,7 +52,7 @@ namespace SomeTests
         }
 
         // Using DateTime and AddDays increment the given date by one year
-        public string AddADay(int year, int month, int day)
+        public string AddAYear(int year, int month, int day)
         {
             return "";
         }
@@ -74,39 +74,27 @@ namespace SomeTests
         {
             return 0;
         }
-
+        // given 2 numbers, return the product of the 2
         public int Mult(int num1, int num2)
         {
             return -1;
         }
-
-        public int Test1(int test)
+        // create a loop that returns the value of 5 times the inputted number.
+        public int ProductFive(int test)
         {
-            // create a loop that returns that returns the value of 5 times 29.
-            int total = -1;
-            return total;
+            return -1;
         }
-
-        public DateTime Test2()
+        // get 5th letter from the words inputted not including spaces
+        //if there aren't 5 letters return a whitespace char ' '
+        public char FifthLetter(string test)
         {
-            // return the date of Christmas 2015.
-            DateTime date = new DateTime(0000, 00, 00);
-            return date;
-        }
-
-        public char Test3(string test)
-        {
-            // get 5th letter from the word "Named"
-            
             return ' ';
         }
-
-        public int Test4(out int sum)
+        // create a loop, return the sum of all the multiples of 4. Also use out the sum of all that is not the multiple of 6.
+        // return the sum of all of the multiples of 4, which aren't multiples of 6, up to the inputted number,
+        public int SumOfFours(int test)
         {
-            // create a loop, return the sum of all the multiples of 4. Also use out the sum of all that is not the multiple of 6.
-            int total = 0;
-            sum = 0;
-            return total;
+            return -1;
         }
     }
 }
