@@ -96,5 +96,114 @@ namespace SomeTests
         {
             return -1;
         }
+
+        // return sum of seq and b , the value of sum should equate to 45 and the total including b =  585
+        public double Summation(double b)
+        {
+            double sum = 0;
+            double[] seq = { 20.3, 2.1, b, 14.4 };
+            return sum;
+        }
+
+        // return true if the value is positive, else return false
+        public bool Withdraw(int value)
+        {
+            bool isValuePositive = false;
+            return isValuePositive;
+        }
+
+        // not sure what this is supposed to do !!!!!!!!!!!!!!!
+        public bool AllowedEntry(int value)
+        {
+            bool isAllowed = false;
+            List<int> ages = new List<int>();
+            
+            return isAllowed;
+        }
+        // return true is the 4 characters make up a string that match a name in the array given
+        public bool NameReturn(char a, char b, char c, char d)
+        {
+            bool isName = false;
+            string[] names = new string[] { "chad", "jess", "adam" };
+            
+            return isName;
+        }
+
+        //reverse the string that is inputted
+        public string Reverse(string word)
+        {
+            // Code here
+            return "";
+        }
+        // Find the smallest integer in an array of integers
+        public int Smallest(int[] intArray)
+        {
+            //Code here
+            return -1;
+        }
+
+        // given a positive integer that is a squared number
+        // find the next squared number eg 9 => 16
+        public int NextSquare(int n)
+        {
+            // Code here
+            return -1;
+        }
+        // Calculate the nth term in a geometric series , a_n
+        // a_1 is the first term, r is the common ratio and n is the number of terms
+        // Remember the first term a_1 is already given, that is, n = 1
+        // Give your answer to 2d.p.
+        public double GeometricSeries(int a_1, double r, int n)
+        {
+            // Code here
+            return -1;
+        }
+
+        public int CreateArray(int size)
+        {
+            int[] myArray = new int[size];
+            int sum = 0;
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                myArray[i] = (i + 1) * (i + 1);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                sum += myArray[i];
+            }
+            return sum;
+        }
+
+
+        public int StackTest()
+        {
+            Stack<int> stack1 = new Stack<int>();
+            int sum = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                stack1.Push(i * i * i);
+            }
+
+            for (int j = 0; j < 10; j++)
+            {
+                sum += stack1.Pop();
+            }
+            return sum;
+        }
+        public int QueueTest()
+        {
+            Queue<int> queue1 = new Queue<int>();
+            int sum1 = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                queue1.Enqueue(i * i * i);
+            }
+
+            for (int j = 0; j < 10; j++)
+            {
+                sum1 += queue1.Dequeue();
+            }
+            return sum1;
+        }
     }
 }

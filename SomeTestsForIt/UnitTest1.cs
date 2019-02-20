@@ -154,5 +154,104 @@ namespace SomeTestsForIt
             Assert.AreEqual(8, unit.SumOfFours(12));
             Assert.AreEqual(148, unit.SumOfFours(42));
         }
+
+        [TestMethod]
+        public void Check_Summation()
+        {
+            var unit = new SomeTests.SomeTest();
+            Assert.AreEqual(585.0, unit.Summation(8.2));
+        }
+        [TestMethod]
+        public void Check_Withdraw()
+        {
+            var unit = new SomeTests.SomeTest();
+            Assert.IsTrue(unit.Withdraw(20));
+        }
+        [TestMethod]
+        public void Check_AllowedEntry()
+        {
+            var unit = new SomeTests.SomeTest();
+            Assert.IsTrue(unit.AllowedEntry(15));
+        }
+        [TestMethod]
+        public void Check_NameReturn()
+        {
+            var unit = new SomeTests.SomeTest();
+            Assert.IsTrue(unit.NameReturn('j', 'e', 's', 's'));
+            Assert.IsTrue(unit.NameReturn('c', 'h', 'a', 'd'));
+            Assert.IsTrue(unit.NameReturn('a', 'd', 'a', 'm'));
+            Assert.IsFalse(unit.NameReturn('m', 'e', 's', 's'));
+            Assert.IsFalse(unit.NameReturn('b', 'e', 's', 't'));
+        }
+        [TestMethod]
+        public void Check_Reverse()
+        {
+            var arrayInstance = new SomeTests.SomeTest();
+            Assert.AreEqual("drow", arrayInstance.Reverse("word"));
+            Assert.AreEqual("", arrayInstance.Reverse(""));
+            Assert.AreEqual("arsenal", arrayInstance.Reverse("lanesra"));
+            Assert.AreEqual("oop", arrayInstance.Reverse("poo"));
+        }
+
+        [TestMethod]
+        public void Check_Smallest()
+        {
+            var arrayInstance = new SomeTests.SomeTest();
+            Assert.AreEqual(1, arrayInstance.Smallest(new[] { 9, 1, 4, 5, 2, 3, 6, 7, 8 }));
+            Assert.AreEqual(8, arrayInstance.Smallest(new[] { 90, 79, 55, 23, 22, 45, 60, 29, 8 }));
+        }
+
+        [TestMethod]
+        public void Check_NextSquare()
+        {
+            var arrayInstance = new SomeTests.SomeTest();
+            Assert.AreEqual(16, arrayInstance.NextSquare(9));
+            Assert.AreEqual(36, arrayInstance.NextSquare(25));
+        }
+
+        [TestMethod]
+        public void Check_GeometricSeries()
+        {
+            var arrayInstance = new SomeTests.SomeTest();
+            Assert.AreEqual(142.32, arrayInstance.GeometricSeries(10, 1.15, 20));
+            Assert.AreEqual(1.55, arrayInstance.GeometricSeries(1, 1.01, 45));
+        }
+
+        [TestMethod]
+        public void Check_ArraySum()
+        {
+            // arrange (setup)
+            var arrayInstance = new SomeTests.SomeTest();
+            var expectedOutput = 385;
+            // act (run code)
+            var actualOutput = arrayInstance.CreateArray(10);
+            // assert (see if test pass /fail)
+            Assert.AreEqual(expectedOutput, actualOutput);
+        }
+
+        [TestMethod]
+        public void Check_Stack()
+        {
+            // arrange
+            var instance01 = new SomeTests.SomeTest();
+            var expected = 8733475;
+            // act
+            var actual = instance01.StackTest();
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Check_Queue()
+        {
+            // arrange
+            var instance01 = new SomeTests.SomeTest();
+            var expected = 3025;
+            // act
+            var actual = instance01.QueueTest();
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }

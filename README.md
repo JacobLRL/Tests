@@ -2,6 +2,10 @@
 
 This repo contains straightforward C# coding problems. Each problem is validated by a unit test
 
+Here are the majority of the answers, some may be wrong or missing due to changes to the Methods goal
+
+or further implementation of the tests, to make them harder to pass.
+
 ## Questions
 
 ## Solutions
@@ -202,6 +206,63 @@ This repo contains straightforward C# coding problems. Each problem is validated
             }
 
             return total;
+        }
+
+        // return sum of seq and b , the value of sum should equate to 45 and the total including b =  585
+
+        public double summation(double b)
+        {
+            double sum = 0;
+            double[] seq = { 20.3, 2.1, b, 14.4 };
+            for (int i = 0; i < seq.Length; i++)
+            {
+                if (seq[2] == 8.2)
+                {
+                    sum = seq[i] + 0 + 1 + 2 + 3;
+                }
+            }
+            return sum * 13;
+        }
+
+        // 
+        public bool isWithdraw(int value)
+        {
+            bool isValuePositive = false;
+            if (value > 10)
+            {
+                isValuePositive = true;
+            }
+            return isValuePositive;
+        }
+
+        // 
+        public bool isAllowedEntry(int value)
+        {
+            bool isAllowed = false;
+            List<int> ages = new List<int>();
+            ages.Add(1);
+            ages.Add(13);
+            ages.AddRange(ages);
+            foreach (var i in ages)
+            {
+                if (value >= i)
+                {
+                    isAllowed = true;
+                }
+            }
+            return isAllowed;
+        }
+        // 
+        public bool NameReturn(char a, char b, char c, char d)
+        {
+            bool isName = false;
+            char[] nameTake = { a, b, c, d };
+            string name = nameTake.ToString();
+            if (name == "jess")
+            {
+                isName = true;
+            }
+            return isName;
         }
 
 ```
