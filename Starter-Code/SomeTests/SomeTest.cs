@@ -74,16 +74,6 @@ namespace SomeTests
         {
             return 0;
         }
-        // given 2 numbers, return the product of the 2
-        public int Mult(int num1, int num2)
-        {
-            return -1;
-        }
-        // create a loop that returns the value of 5 times the inputted number.
-        public int ProductFive(int test)
-        {
-            return -1;
-        }
         // get 5th letter from the words inputted not including spaces
         //if there aren't 5 letters return a whitespace char ' '
         public char FifthLetter(string test)
@@ -96,22 +86,6 @@ namespace SomeTests
         {
             return -1;
         }
-
-        // return sum of seq and b , the value of sum should equate to 45 and the total including b =  585
-        public double Summation(double b)
-        {
-            double sum = 0;
-            double[] seq = { 20.3, 2.1, b, 14.4 };
-            return sum;
-        }
-
-        // return true if the value is positive, else return false
-        public bool Withdraw(int value)
-        {
-            bool isValuePositive = false;
-            return isValuePositive;
-        }
-
         // return true is the 4 characters make up a string that match a name in the array given
         public bool NameReturn(char a, char b, char c, char d)
         {
@@ -119,13 +93,6 @@ namespace SomeTests
             string[] names = new string[] { "chad", "jess", "adam" };
             
             return isName;
-        }
-
-        //reverse the string that is inputted
-        public string Reverse(string word)
-        {
-            // Code here
-            return "";
         }
         // Find the smallest integer in an array of integers
         public int Smallest(int[] intArray)
@@ -149,24 +116,6 @@ namespace SomeTests
         {
             // Code here
             return -1;
-        }
-
-        public static Dictionary<int, string> topFilms = new Dictionary<int, string>();
-        public Dictionary<int, string> TopFilms()
-        {
-            //Put all these films in a list in order of release date
-            topFilms.Add(1994, "Shawshank Redemption");
-            topFilms.Add(1972, "The Godfather");
-            topFilms.Add(2008, "The Dark Knight");
-            topFilms.Add(1957, "12 Angry Men");
-            topFilms.Add(1993, "Schindler's List");
-            topFilms.Add(1994, "Pulp Fiction");
-            topFilms.Add(1966, "The Good, the Bad and the Ugly");
-            topFilms.Add(1999, "Fight Club");
-            topFilms.Add(2010, "Inception");
-            topFilms.Add(2018, "Into the Spider-Verse");
-
-            return topFilms;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace SomeTestsForIt
             Assert.AreEqual("hElLo", Tests.TextToSpongeBobMeme("Hello"));
             Assert.AreEqual("jQuErY iS bEtTeR", Tests.TextToSpongeBobMeme("jQuery is better"));
             Assert.AreEqual("", Tests.TextToSpongeBobMeme(""));
-            
+
         }
 
         [TestMethod]
@@ -30,22 +30,22 @@ namespace SomeTestsForIt
         public void Check_SumOfArray()
         {
             var Tests = new SomeTests.SomeTest();
-            Assert.AreEqual(9, Tests.SumIgnoringMax(new int []{ 2, 3, 4, 5 }));
+            Assert.AreEqual(9, Tests.SumIgnoringMax(new int[] { 2, 3, 4, 5 }));
             Assert.AreEqual(1005, Tests.SumIgnoringMax(new int[] { 999, 1000, 5, 1 }));
-            Assert.AreEqual(9, Tests.SumIgnoringMax(new int[] { 1,2,1,1,1,1,1,1,1,1 }));
+            Assert.AreEqual(9, Tests.SumIgnoringMax(new int[] { 1, 2, 1, 1, 1, 1, 1, 1, 1, 1 }));
         }
 
         [TestMethod]
         public void Check_Pyramid()
         {
             var Tests = new SomeTests.SomeTest();
-            CollectionAssert.AreEqual( new char[,] { 
+            CollectionAssert.AreEqual(new char[,] {
                 { ' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ' },
                 { ' ', ' ', ' ', '*', '*', '*', ' ', ' ', ' ' },
                 { ' ', ' ', '*', '*', '*', '*', '*', ' ', ' ' },
                 { ' ', '*', '*', '*', '*', '*', '*', '*', ' ' },
                 { '*', '*', '*', '*', '*', '*', '*', '*', '*' }
-            }, Tests.Pyramid(5,9));
+            }, Tests.Pyramid(5, 9));
             CollectionAssert.AreEqual(new char[,] {
                 { ' ', ' ', ' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ' },
                 { ' ', ' ', ' ', ' ', ' ', '*', '*', '*', ' ', ' ', ' ', ' ', ' ' },
@@ -60,9 +60,9 @@ namespace SomeTestsForIt
         public void Check_Different()
         {
             var Tests = new SomeTests.SomeTest();
-            Assert.AreEqual(new int[] { 1, 3, 4, 5 }, Tests.Different(new int[] { 1,2,3,4,5 }, new int[] { 2 }));
-            Assert.AreEqual(new int[] { }, Tests.Different(new int[] { }, new int[] { 2, 3, 4 }));
-            Assert.AreEqual(new int[] { 2, 3, 4 }, Tests.Different(new int[] { 2, 3, 4 }, new int[] { }));
+            CollectionAssert.AreEqual(new int[] { 1, 3, 4, 5 }, Tests.Different(new int[] { 1, 2, 3, 4, 5 }, new int[] { 2 }));
+            CollectionAssert.AreEqual(new int[] { }, Tests.Different(new int[] { }, new int[] { 2, 3, 4 }));
+            CollectionAssert.AreEqual(new int[] { 2, 3, 4 }, Tests.Different(new int[] { 2, 3, 4 }, new int[] { }));
         }
 
         [TestMethod]
@@ -93,13 +93,11 @@ namespace SomeTestsForIt
         [TestMethod]
         public void Check_ReverseString()
         {
-            // arrange (setup)
-            var Instance = new SomeTests.SomeTest();
-            string expectedOutput = "olleH";
-            // act (run code)
-            var actualOutput = Instance.ReverseString("Hello");
-            // assert (see if test pass/fail)
-            Assert.AreEqual(expectedOutput, actualOutput);
+            var arrayInstance = new SomeTests.SomeTest();
+            Assert.AreEqual("drow", arrayInstance.ReverseString("word"));
+            Assert.AreEqual("", arrayInstance.ReverseString(""));
+            Assert.AreEqual("arsenal", arrayInstance.ReverseString("lanesra"));
+            Assert.AreEqual("oop", arrayInstance.ReverseString("poo"));
         }
 
         [TestMethod]
@@ -112,26 +110,6 @@ namespace SomeTestsForIt
             var actualOutput = Instance.Quadratic(3, 2, -1);
             // assert (see if test pass/fail)
             Assert.AreEqual(expectedOutput, actualOutput);
-        }
-
-       
-        [TestMethod]
-        public void Check_Multiplication()
-        {
-            var Instance = new SomeTests.SomeTest();
-            //Assert
-            Assert.AreEqual(50, Instance.Mult(5, 10));
-            Assert.AreEqual(60, Instance.Mult(6, 10));
-        }
-
-        [TestMethod]
-        public void Check_ProductFive()
-        {
-            // arrange (setup)
-            var unit = new SomeTests.SomeTest();
-            // assert (see if test pass/fail)
-            Assert.AreEqual(145, unit.ProductFive(29));
-            Assert.AreEqual(65, unit.ProductFive(13));
         }
 
         [TestMethod]
@@ -152,23 +130,9 @@ namespace SomeTestsForIt
             // arrange (setup)
             var unit = new SomeTests.SomeTest();
             // assert (see if test pass/fail)
-            Assert.AreEqual(8, unit.SumOfFours(10));
-            Assert.AreEqual(8, unit.SumOfFours(12));
+            Assert.AreEqual(12, unit.SumOfFours(10));
+            Assert.AreEqual(12, unit.SumOfFours(12));
             Assert.AreEqual(148, unit.SumOfFours(42));
-        }
-
-        [TestMethod]
-        public void Check_Summation()
-        {
-            var unit = new SomeTests.SomeTest();
-            Assert.AreEqual(585.0, unit.Summation(8.2));
-        }
-
-        [TestMethod]
-        public void Check_Withdraw()
-        {
-            var unit = new SomeTests.SomeTest();
-            Assert.IsTrue(unit.Withdraw(20));
         }
 
         [TestMethod]
@@ -180,15 +144,6 @@ namespace SomeTestsForIt
             Assert.IsTrue(unit.NameReturn('a', 'd', 'a', 'm'));
             Assert.IsFalse(unit.NameReturn('m', 'e', 's', 's'));
             Assert.IsFalse(unit.NameReturn('b', 'e', 's', 't'));
-        }
-        [TestMethod]
-        public void Check_Reverse()
-        {
-            var arrayInstance = new SomeTests.SomeTest();
-            Assert.AreEqual("drow", arrayInstance.Reverse("word"));
-            Assert.AreEqual("", arrayInstance.Reverse(""));
-            Assert.AreEqual("arsenal", arrayInstance.Reverse("lanesra"));
-            Assert.AreEqual("oop", arrayInstance.Reverse("poo"));
         }
 
         [TestMethod]
@@ -213,21 +168,6 @@ namespace SomeTestsForIt
             var arrayInstance = new SomeTests.SomeTest();
             Assert.AreEqual(142.32, arrayInstance.GeometricSeries(10, 1.15, 20));
             Assert.AreEqual(1.55, arrayInstance.GeometricSeries(1, 1.01, 45));
-        }
-
-        [TestMethod]
-        public void Check_TopFilms()
-        {
-            //Arrange
-            var instance04 = new SomeTests.SomeTest();
-            var expected = new SortedList<int, string>();
-            var expectedCount = 10;
-            //Act
-            var actual = instance04.TopFilms();
-            var actualCount = actual.Count;
-            //Assert
-            Assert.AreEqual(expectedCount, actualCount);
-            Assert.IsInstanceOfType(actual, expected.GetType());
         }
     }
 }

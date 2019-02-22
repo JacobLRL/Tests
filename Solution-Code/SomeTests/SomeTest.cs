@@ -180,22 +180,6 @@ namespace SomeTests
             return sum;
         }
 
-        // return sum of seq and b , the value of sum should equate to 45 and the total including b =  585
-        // not sure what this is supposed to do
-        public double Summation(double b)
-        {
-            double sum = 0;
-            double[] seq = { 20.3, 2.1, b, 14.4 };
-            for (int i = 0; i < seq.Length; i++)
-            {
-                if (seq[2] == 8.2)
-                {
-                    sum = seq[i] + 0 + 1 + 2 + 3;
-                }
-            }
-            return sum * 13;
-        }
-
         // return true is the 4 characters make up a string that match a name in the array given
         public bool NameReturn(char a, char b, char c, char d)
         {
@@ -230,24 +214,6 @@ namespace SomeTests
                 d = d * r;
             }
             return Math.Round(d, 2);
-        }
-
-        public static SortedDictionary<int, string> topFilms = new SortedDictionary<int, string>();
-        public Dictionary<int, string> TopFilms()
-        {
-            //Put all these films in a list in order of release date
-            topFilms.Add(1994, "Shawshank Redemption");
-            topFilms.Add(1972, "The Godfather");
-            topFilms.Add(2008, "The Dark Knight");
-            topFilms.Add(1957, "12 Angry Men");
-            topFilms.Add(1993, "Schindler's List");
-            topFilms.Add(1994, "Pulp Fiction");
-            topFilms.Add(1966, "The Good, the Bad and the Ugly");
-            topFilms.Add(1999, "Fight Club");
-            topFilms.Add(2010, "Inception");
-            topFilms.Add(2018, "Into the Spider-Verse");
-            Dictionary<int, string> dict = new Dictionary<int, string>(topFilms);
-            return dict;
         }
     }
 }
