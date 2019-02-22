@@ -112,14 +112,6 @@ namespace SomeTests
             return isValuePositive;
         }
 
-        // not sure what this is supposed to do !!!!!!!!!!!!!!!
-        public bool AllowedEntry(int value)
-        {
-            bool isAllowed = false;
-            List<int> ages = new List<int>();
-            
-            return isAllowed;
-        }
         // return true is the 4 characters make up a string that match a name in the array given
         public bool NameReturn(char a, char b, char c, char d)
         {
@@ -159,51 +151,22 @@ namespace SomeTests
             return -1;
         }
 
-        public int CreateArray(int size)
+        public static Dictionary<int, string> topFilms = new Dictionary<int, string>();
+        public Dictionary<int, string> TopFilms()
         {
-            int[] myArray = new int[size];
-            int sum = 0;
-            for (int i = 0; i < myArray.Length; i++)
-            {
-                myArray[i] = (i + 1) * (i + 1);
-            }
-            for (int i = 0; i < 10; i++)
-            {
-                sum += myArray[i];
-            }
-            return sum;
-        }
+            //Put all these films in a list in order of release date
+            topFilms.Add(1994, "Shawshank Redemption");
+            topFilms.Add(1972, "The Godfather");
+            topFilms.Add(2008, "The Dark Knight");
+            topFilms.Add(1957, "12 Angry Men");
+            topFilms.Add(1993, "Schindler's List");
+            topFilms.Add(1994, "Pulp Fiction");
+            topFilms.Add(1966, "The Good, the Bad and the Ugly");
+            topFilms.Add(1999, "Fight Club");
+            topFilms.Add(2010, "Inception");
+            topFilms.Add(2018, "Into the Spider-Verse");
 
-
-        public int StackTest()
-        {
-            Stack<int> stack1 = new Stack<int>();
-            int sum = 0;
-            for (int i = 1; i <= 100; i++)
-            {
-                stack1.Push(i * i * i);
-            }
-
-            for (int j = 0; j < 10; j++)
-            {
-                sum += stack1.Pop();
-            }
-            return sum;
-        }
-        public int QueueTest()
-        {
-            Queue<int> queue1 = new Queue<int>();
-            int sum1 = 0;
-            for (int i = 1; i <= 100; i++)
-            {
-                queue1.Enqueue(i * i * i);
-            }
-
-            for (int j = 0; j < 10; j++)
-            {
-                sum1 += queue1.Dequeue();
-            }
-            return sum1;
+            return topFilms;
         }
     }
 }

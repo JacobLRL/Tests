@@ -265,4 +265,46 @@ or further implementation of the tests, to make them harder to pass.
             return isName;
         }
 
+        public string Reverse(string word)
+        {
+            char[] charArray = word.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+
+        public int Smallest(int[] intArray)
+        {
+            int smallest = intArray[0];
+            foreach (var i in intArray)
+            {
+                if (i < smallest)
+                {
+                    smallest = i;
+                }
+            }
+            return smallest;
+        }
+
+        public int NextSquare(int n)
+        {
+            int x;
+            double d = n + 1;
+            while (Math.Sqrt(d) % 1 != 0)
+            {
+                d++;
+            }
+            x = (int)d;
+            return x;
+        }
+
+        public double GeometricSeries(int a1, double r, int n)
+        {
+            double d = a1;
+            for (int i = 0; i < n - 1; i++)
+            {
+                d = d * r;
+            }
+            return Math.Round(d,2);
+        }
+
 ```

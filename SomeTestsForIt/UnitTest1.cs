@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SomeTests;
 
@@ -144,6 +145,7 @@ namespace SomeTestsForIt
             Assert.AreEqual('o', unit.FifthLetter("      hello"));
             Assert.AreEqual(' ', unit.FifthLetter(" "));
         }
+
         [TestMethod]
         public void Check_SumOfFours()
         {
@@ -161,18 +163,14 @@ namespace SomeTestsForIt
             var unit = new SomeTests.SomeTest();
             Assert.AreEqual(585.0, unit.Summation(8.2));
         }
+
         [TestMethod]
         public void Check_Withdraw()
         {
             var unit = new SomeTests.SomeTest();
             Assert.IsTrue(unit.Withdraw(20));
         }
-        [TestMethod]
-        public void Check_AllowedEntry()
-        {
-            var unit = new SomeTests.SomeTest();
-            Assert.IsTrue(unit.AllowedEntry(15));
-        }
+
         [TestMethod]
         public void Check_NameReturn()
         {
@@ -218,40 +216,18 @@ namespace SomeTestsForIt
         }
 
         [TestMethod]
-        public void Check_ArraySum()
+        public void Check_TopFilms()
         {
-            // arrange (setup)
-            var arrayInstance = new SomeTests.SomeTest();
-            var expectedOutput = 385;
-            // act (run code)
-            var actualOutput = arrayInstance.CreateArray(10);
-            // assert (see if test pass /fail)
-            Assert.AreEqual(expectedOutput, actualOutput);
-        }
-
-        [TestMethod]
-        public void Check_Stack()
-        {
-            // arrange
-            var instance01 = new SomeTests.SomeTest();
-            var expected = 8733475;
-            // act
-            var actual = instance01.StackTest();
-            // assert
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void Check_Queue()
-        {
-            // arrange
-            var instance01 = new SomeTests.SomeTest();
-            var expected = 3025;
-            // act
-            var actual = instance01.QueueTest();
-            // assert
-            Assert.AreEqual(expected, actual);
-
+            //Arrange
+            var instance04 = new SomeTests.SomeTest();
+            var expected = new SortedList<int, string>();
+            var expectedCount = 10;
+            //Act
+            var actual = instance04.TopFilms();
+            var actualCount = actual.Count;
+            //Assert
+            Assert.AreEqual(expectedCount, actualCount);
+            Assert.IsInstanceOfType(actual, expected.GetType());
         }
     }
 }
