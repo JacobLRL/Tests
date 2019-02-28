@@ -125,5 +125,12 @@ namespace SomeTests
             string code = "";
             return code;
         }
+
+        //Decrypt the roman message
+        //"Uryyb" would become "Hello"
+        public string RomanDecryption(string code) {
+            string message = "";
+            return message;
+        }
     }
 }

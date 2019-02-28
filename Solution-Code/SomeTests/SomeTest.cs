@@ -229,5 +229,20 @@ namespace SomeTests
             }
             return code;
         }
+
+        //Decrypt the roman message
+        //"Uryyb" would become "Hello"
+        public string RomanDecryption(string code)
+        {
+            string lower = "abcdefghijklmnopqrstuvwxyz";
+            string upper = lower.ToUpper();
+            string message = "";
+            foreach (var elem in code) {
+                if (lower.Contains(elem)) message += lower[(lower.IndexOf(elem) + 13) % 26];
+                else if (upper.Contains(elem)) message += upper[(upper.IndexOf(elem) + 13) % 26];
+                else message += elem;
+            }
+            return message;
+        }
     }
 }
