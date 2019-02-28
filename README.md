@@ -89,8 +89,13 @@ or further implementation of the tests, to make them harder to pass.
 	// takes 2 int arrays, returns teh elements from the first array that aren't in the 
         // second array
         public int[] Different(int[] arr1, int[] arr2) {
-
-            return new int[] { };
+            List<int> ans = new List<int>();
+            foreach (var elem in arr1) {
+                if (!arr2.Contains(elem)) {
+                    ans.Add(elem);
+                }
+            }
+            return ans.ToArray();
         }
 
 	// Using DateTime and AddDays increment the given date by one year

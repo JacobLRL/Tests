@@ -215,5 +215,19 @@ namespace SomeTests
             }
             return Math.Round(d, 2);
         }
+
+        //Roman Encyption shift each letter in the string up by 13, it is still csae sensitive
+        // "Hello" would become "Uryyb"
+        public string RomanEncryption(string messge) {
+            string lower = "abcdefghijklmnopqrstuvwxyz";
+            string upper = lower.ToUpper();
+            string code = "";
+            foreach (var elem in messge) {
+                if (lower.Contains(elem)) code += lower[(lower.IndexOf(elem) + 13) % 26];
+                else if (upper.Contains(elem)) code += upper[(upper.IndexOf(elem) + 13) % 26];
+                else code += elem;
+            }
+            return code;
+        }
     }
 }

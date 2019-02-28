@@ -117,5 +117,13 @@ namespace SomeTests
             // Code here
             return -1;
         }
+
+        //Roman Encyption shift each letter in the string up by 13, it is still csae sensitive
+        // "Hello" would become "Uryyb"
+        public string RomanEncryption(string messge)
+        {
+            string code = "";
+            return code;
+        }
     }
 }

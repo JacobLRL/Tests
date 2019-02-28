@@ -169,5 +169,15 @@ namespace SomeTestsForIt
             Assert.AreEqual(142.32, arrayInstance.GeometricSeries(10, 1.15, 20));
             Assert.AreEqual(1.55, arrayInstance.GeometricSeries(1, 1.01, 45));
         }
+
+        [TestMethod]
+        public void Check_RomanEncryption()
+        {
+            var instance = new SomeTests.SomeTest();
+            Assert.AreEqual("", instance.RomanEncryption(""));
+            Assert.AreEqual("Uryyb", instance.RomanEncryption("Hello"));
+            Assert.AreEqual("Guvf vf n frperg pbqr 1209654930", instance.RomanEncryption("This is a secret code 1209654930"));
+            Assert.AreEqual("V'ir eha bhg bs vqrnf", instance.RomanEncryption("I've run out of ideas"));
+        }
     }
 }

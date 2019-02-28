@@ -136,13 +136,6 @@ namespace SomeTestsForIt
         }
 
         [TestMethod]
-        public void Check_Summation()
-        {
-            var unit = new SomeTests.SomeTest();
-            Assert.AreEqual(585.0, unit.Summation(8.2));
-        }
-
-        [TestMethod]
         public void Check_NameReturn()
         {
             var unit = new SomeTests.SomeTest();
@@ -178,18 +171,13 @@ namespace SomeTestsForIt
         }
 
         [TestMethod]
-        public void Check_TopFilms()
+        public void Check_RomanEncryption()
         {
-            //Arrange
-            //var instance04 = new SomeTests.SomeTest();
-            //var expected = new SortedList<int, string>();
-            //var expectedCount = 10;
-            ////Act
-            //var actual = instance04.TopFilms();
-            //var actualCount = actual.Count;
-            ////Assert
-            //CollectionAssert.AreEqual(expectedCount, actualCount);
-            //CollectionAssert.IsInstanceOfType(actual, expected.GetType());
+            var instance = new SomeTests.SomeTest();
+            Assert.AreEqual("", instance.RomanEncryption(""));
+            Assert.AreEqual("Uryyb", instance.RomanEncryption("Hello"));
+            Assert.AreEqual("Guvf vf n frperg pbqr 1209654930", instance.RomanEncryption("This is a secret code 1209654930"));
+            Assert.AreEqual("V'ir eha bhg bs vqrnf", instance.RomanEncryption("I've run out of ideas"));
         }
     }
 }
