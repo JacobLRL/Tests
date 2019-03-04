@@ -67,11 +67,11 @@ namespace SomeTests
             //some code to make it work, good luck 
             bool b = false;
             int count = 0;
-            for (int i = 0; i < pyramid.GetLength(0); i++)
+            for (int i = 0; i < height; i++)
             {
-                for (int j = 0; j < pyramid.GetLength(1); j++)
+                for (int j = 0; j < width; j++)
                 {
-                    if ((pyramid.GetLength(1) / 2 - i) == j || b)
+                    if ((width / 2 - i) == j || b)
                     {
                         b = true;
                         pyramid[i, j] = '*';
@@ -106,29 +106,15 @@ namespace SomeTests
         // Using DateTime and AddDays increment the given date by one year
         public string AddAYear(int year, int month, int day)
         {
-            DateTime date = new DateTime(year, month, day);
-            date = date.AddDays(365);
-            string test1 = date.ToString();
-            return test1;
+            return new DateTime(year+ 1, month, day).ToString();
         }
         // An Array of integers are provided theyre in a random order
         // create a method that will sort this array in an acsending order
         public int[] BubSort(int[] unsorted)
         {
-            int temp = 0;
-            for (int i = 0; i < unsorted.Length; i++)
-            {
-                for (int j = 0; j < unsorted.Length - 1; j++)
-                {
-                    if (unsorted[j] > unsorted[j + 1])
-                    {
-                        temp = unsorted[j + 1];
-                        unsorted[j + 1] = unsorted[j];
-                        unsorted[j] = temp;
-                    }
-                }
-            }
-            return unsorted;
+            List<int> list = unsorted.ToList();
+            list.Sort();
+            return list.ToArray();
         }
 
         // Create a method that will write the string "Hello" reversed
@@ -243,6 +229,18 @@ namespace SomeTests
                 else message += elem;
             }
             return message;
+        }
+
+        // summation between the 2 numbers including numbers inputed given Sum(0,3) => 6 and Sum(3,-1) => 5
+        public int Sum(int a, int b) {
+            int max = (a > b) ? a : b;
+            int min = (a > b) ? b : a;
+            int sum = 0;
+            for (int i = min; i <= max; i++)
+            {
+                sum += i;
+            }
+            return sum;
         }
     }
 }

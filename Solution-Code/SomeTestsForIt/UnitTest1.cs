@@ -189,5 +189,15 @@ namespace SomeTestsForIt
             Assert.AreEqual("This is a secret code 1209654930", instance.RomanEncryption("Guvf vf n frperg pbqr 1209654930"));
             Assert.AreEqual("I've run out of ideas", instance.RomanEncryption("V'ir eha bhg bs vqrnf"));
         }
+
+        [TestMethod]
+        public void Check_Sum() {
+            var instance = new SomeTest();
+            Assert.AreEqual(5, instance.Sum(3,-1));
+            Assert.AreEqual(3, instance.Sum(3,3));
+            Assert.AreEqual(55, instance.Sum(0,10));
+            Assert.AreEqual(-5, instance.Sum(-3,-2));
+            Assert.AreEqual(0, instance.Sum(-10,10));
+        }
     }
 }
